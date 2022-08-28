@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8272921555743686856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4682709707508936021}
+  - component: {fileID: 3927830533325234967}
+  m_Layer: 0
+  m_Name: Study
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4682709707508936021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8272921555743686856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 789.1011, y: 420.56528, z: -257.85052}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3927830533325234967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8272921555743686856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29310cd547799f841ad6da6a995d5eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextString:
+  - "\u770B\u4E86\u597D\u4E45\u4E66"
+  - "\u8FD8\u5728\u770B"
+  - "\u773C\u775B\u6709\u70B9\u7D2F\u4E86"
+  - "\u89E6\u7C7B\u65C1\u901A"
+  TestEvent: {fileID: 11400000, guid: f91f7627b8631a74fb8609f1dcf3503e, type: 2}
+  optiontext: "\u8FD8\u8981\u7EE7\u7EED\u5B66\u5417"
+  Option: 1

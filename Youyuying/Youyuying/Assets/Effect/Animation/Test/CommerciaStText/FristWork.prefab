@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2313206093732937053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4081077807764891053}
+  - component: {fileID: 4152445591508755391}
+  m_Layer: 0
+  m_Name: FristWork
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4081077807764891053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313206093732937053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 698.19244, y: 400.94196, z: -37.62908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4152445591508755391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313206093732937053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29310cd547799f841ad6da6a995d5eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextString:
+  - "\u7B2C\u4E00\u6B21\u5DE5\u4F5C"
+  - "\u662F\u5426\u5DE5\u4F5C\uFF1F"
+  TestEvent: {fileID: 11400000, guid: 03d613bd31ac34c41a23c8ffba98f507, type: 2}
+  optiontext: "\u8981\u63A5\u53D7\u8FD9\u4EFD\u5DE5\u4F5C\u5417"
+  Option: 1
