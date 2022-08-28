@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static UnityEditor.PlayerSettings;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameObject mainCanvasPrefab;
+
     public static GameManager Instance;
+
+    public int CurrRound;
 
     /// <summary>
     /// 显示的是当前的章节
@@ -16,6 +23,10 @@ public class GameManager : MonoBehaviour
     public ISceneManager AtSceneManager;
     public EffectManager EffectManager;
 
+    public GameConfig gameConfig;
+
+    private MainCanvas mainCanvas;
+
     private void Awake()
     {
         if (Instance == null)
@@ -23,10 +34,42 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             return;
-        }
-        Destroy(gameObject);
+        }    
     }
-  
+
+    private void Start()
+    {
+        PlayerModel.ChangedVEvent += OnChangedVEvent;
+    }
+
+    public void StartGame()
+    {
+        CurrRound = 0;
+
+        SceneManager.LoadScene("Dorm");
+
+        GameObject obj = Instantiate(mainCanvasPrefab);
+        mainCanvas = obj.GetComponent<MainCanvas>();
+
+        PlayerModel.ChangedV(ValueType.Energy, gameConfig.PlayerInitEnergy);
+    }
+
+    public void NextRound()
+    {
+        CurrRound++;
+
+        PlayerModel.ChangedV(ValueType.Energy, gameConfig.PlayerInitEnergy);
+
+        if (CurrRound > gameConfig.TotalRounds)
+        {
+            Debug.Log("GameEnd");
+        }
+    }
+
+    void OnChangedVEvent(ValueType type, int oldValue, int newValue, int changeAmount)
+    {
+
+    }
 
     /// <summary>
     /// 更新玩家足迹

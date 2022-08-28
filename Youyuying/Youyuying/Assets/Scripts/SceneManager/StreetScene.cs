@@ -31,7 +31,7 @@ public class StreetScene : ISceneManager
             case ValueType.Emotion:
                 break;
 
-            case ValueType.Vig:
+            case ValueType.Energy:
                 break;
 
             case ValueType.Major:
@@ -55,7 +55,7 @@ public class StreetScene : ISceneManager
             case ValueType.Emotion:
                 break;
 
-            case ValueType.Vig:
+            case ValueType.Energy:
                 break;
 
             case ValueType.Major:
@@ -79,7 +79,7 @@ public class StreetScene : ISceneManager
             case ValueType.Emotion:
                 break;
 
-            case ValueType.Vig:
+            case ValueType.Energy:
                 break;
 
             case ValueType.Major:

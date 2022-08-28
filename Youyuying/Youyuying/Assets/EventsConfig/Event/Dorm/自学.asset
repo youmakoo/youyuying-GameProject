@@ -17,11 +17,11 @@ MonoBehaviour:
   AtReset: 0
   EventData:
   - type: 0
-    Value: -10
+    Value: 65
   - type: 1
-    Value: -10
+    Value: -100
   - type: 2
-    Value: 5
+    Value: 55
   EventConfines:
   - {fileID: 11400000, guid: 683c5f7d602bdcb43a3a6be3256ecec5, type: 2}
   - {fileID: 11400000, guid: 2a06dcb3d03ad404cac37a5e63dab1ae, type: 2}

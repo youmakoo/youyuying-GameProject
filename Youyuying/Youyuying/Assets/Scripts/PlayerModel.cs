@@ -5,7 +5,7 @@ using System;
 public enum ValueType
 {
     Emotion,
-    Vig,
+    Energy,
     Major,
     Money
 }
