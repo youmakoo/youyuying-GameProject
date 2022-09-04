@@ -60,10 +60,33 @@ public class GameManager : MonoBehaviour
 
         PlayerModel.ChangedV(ValueType.Energy, gameConfig.PlayerInitEnergy);
 
-        if (CurrRound > gameConfig.TotalRounds)
+        if (CurrRound >= gameConfig.TotalRounds - 1)
         {
-            Debug.Log("GameEnd");
+            mainCanvas.ShowEnding(GetEnding());
         }
+    }
+
+    public string GetEnding()
+    {
+        foreach(Ending ending in gameConfig.endings)
+        {
+            if(PlayerModel.GetV(ValueType.Major) > ending.Major 
+                && PlayerModel.GetV(ValueType.Emotion) > ending.Emotion)
+            {
+                return ending.text;
+            }
+        }
+        return "";
+    }
+
+    public void ShowEnergyNotEnough()
+    {
+        mainCanvas.ShowEnergyNotEnough();
+    }
+
+    public void ChangeCurrentSceneSprite(Sprite newSprite)
+    {
+        AtSceneManager.sceneSprite.sprite = newSprite;
     }
 
     void OnChangedVEvent(ValueType type, int oldValue, int newValue, int changeAmount)

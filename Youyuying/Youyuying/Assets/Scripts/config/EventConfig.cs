@@ -28,11 +28,23 @@ public class EventConfig : ScriptableObject
 
     public IEffect Effect;
 
+    public Sprite newSprite;
+
     public void Trigger()
     {
        
         if (TriggerCount == 0) return;
         Debug.Log($"触发了{Name}事件");
+
+        foreach (var item in EventData)
+        {
+            if(item.type == ValueType.Energy && Mathf.Abs(item.Value) > PlayerModel.GetV(ValueType.Energy))
+            {
+                GameManager.Instance.ShowEnergyNotEnough();
+               Debug.Log("No Energy");
+                return;
+            }
+        }
 
         foreach (var item in EventConfines)
         {
@@ -54,6 +66,11 @@ public class EventConfig : ScriptableObject
         else
         {
             GameManager.Instance.EffectManager.PlayEffect(Effect);
+        }
+
+        if(newSprite != null)
+        {
+            GameManager.Instance.ChangeCurrentSceneSprite(newSprite);
         }
       
         PlayerModel.DebugData();

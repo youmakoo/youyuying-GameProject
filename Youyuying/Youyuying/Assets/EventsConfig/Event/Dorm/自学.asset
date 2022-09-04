@@ -19,10 +19,11 @@ MonoBehaviour:
   - type: 0
     Value: 65
   - type: 1
-    Value: -100
+    Value: -15
   - type: 2
     Value: 55
   EventConfines:
   - {fileID: 11400000, guid: 683c5f7d602bdcb43a3a6be3256ecec5, type: 2}
   - {fileID: 11400000, guid: 2a06dcb3d03ad404cac37a5e63dab1ae, type: 2}
   Effect: {fileID: 3927830533325234967, guid: f8e9b18ec4ea5b84caed2084df497319, type: 3}
+  newSprite: {fileID: 0}

@@ -12,7 +12,8 @@ public abstract class ISceneManager : MonoBehaviour
 
     public List<GameObject> AllShowButton=new List<GameObject>();
 
-   
+    public Image sceneSprite;
+    public Sprite defaultSprite;
 
     private void Start()
     {

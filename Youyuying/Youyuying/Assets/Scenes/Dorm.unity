@@ -1323,6 +1323,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7759d939ddfeb2544b4dbedb3427424f, type: 2}
   - {fileID: 11400000, guid: 10e9b3b863a34fb45bee82f4d9668d9a, type: 2}
   AllShowButton: []
+  sceneSprite: {fileID: 701936474}
+  defaultSprite: {fileID: 21300000, guid: 037fd1e1ea02ca541926aaa2b95038b9, type: 3}
 --- !u!114 &1937890070
 MonoBehaviour:
   m_ObjectHideFlags: 0

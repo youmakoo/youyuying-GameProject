@@ -10,12 +10,19 @@ public class MainCanvas : MonoBehaviour
     public Text energy;
     public Text major;
     public Text money;
+    public Text round;
+    public Text ending;
+    public Text noEnergy;
+    public Animator showText;
+
+    public Button NextRoundBtn;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
 
         PlayerModel.ChangedVEvent += OnChangedVEvent;
+        round.text = "Round: " + (GameManager.Instance.CurrRound + 1);
         ResetStats();
     }
 
@@ -41,10 +48,28 @@ public class MainCanvas : MonoBehaviour
         {
             if (newValue <= 0)
             {
-
-                GameManager.Instance.NextRound();
+                NextRoundBtn.gameObject.SetActive(true);
             }
         }
+    }
+
+    public void NextRound()
+    {
+        GameManager.Instance.NextRound();
+        NextRoundBtn.gameObject.SetActive(false);
+        round.text = "Round: " + (GameManager.Instance.CurrRound + 1);
+    }
+
+    public void ShowEnding(string text)
+    {
+        ending.transform.parent.gameObject.SetActive(true);
+        ending.text = text;
+    }
+
+    public void ShowEnergyNotEnough()
+    {
+        noEnergy.gameObject.SetActive(true);
+        showText.Play("EnergyTextShow");
     }
 
     public void ResetStats()

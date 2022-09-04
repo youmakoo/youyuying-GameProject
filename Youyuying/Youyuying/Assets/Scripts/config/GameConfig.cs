@@ -7,4 +7,13 @@ public class GameConfig : ScriptableObject
 {
     public int PlayerInitEnergy;
     public int TotalRounds;
+    public List<Ending> endings;
+}
+
+[System.Serializable]
+public class Ending
+{
+    public int Major;
+    public int Emotion;
+    public string text;
 }

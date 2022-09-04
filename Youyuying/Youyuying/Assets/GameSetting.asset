@@ -13,4 +13,17 @@ MonoBehaviour:
   m_Name: GameSetting
   m_EditorClassIdentifier: 
   PlayerInitEnergy: 100
-  TotalRounds: 8
+  TotalRounds: 3
+  endings:
+  - Major: 60
+    Emotion: 60
+    text: "\u7ED3\u5C401"
+  - Major: 40
+    Emotion: 40
+    text: "\u7ED3\u5C402"
+  - Major: 20
+    Emotion: 20
+    text: "\u7ED3\u5C403"
+  - Major: 0
+    Emotion: 0
+    text: "\u7ED3\u5C404"
