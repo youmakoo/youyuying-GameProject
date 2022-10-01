@@ -16,4 +16,5 @@ public class Ending
     public int Major;
     public int Emotion;
     public string text;
+    public Sprite endImage;
 }

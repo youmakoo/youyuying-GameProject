@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 
 public class ClassRoomScene : ISceneManager
 {
+    static bool firstIn;
+    public EventConfig _FirstInEvent;
+    public Sprite _FirstInSprite;
+
     protected override LocationType GetSceneName()
     {
         return LocationType.ClassRoom;
@@ -17,10 +22,21 @@ public class ClassRoomScene : ISceneManager
 
     protected override void QStart()
     {
-     
+
+        StartCoroutine(FirstInEvent());
     }
 
+    IEnumerator FirstInEvent()
+    {
+        yield return null;
 
+        if (!firstIn)
+        {
+            sceneSprite.sprite = _FirstInSprite;
+            _FirstInEvent.Trigger();
+            firstIn = true;
+        }
+    }
 
     protected override void VCallBack(ValueType type, int old, int _new, int v)
     {

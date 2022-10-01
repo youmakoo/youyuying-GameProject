@@ -39,7 +39,8 @@ public class TestEffect : IEffect
 
         if (Option == false  )
         {
-           
+            HideTextUI();
+            GameManager.Instance.ChangeCurrentSceneDefaultSprite();
         }
     }
 

@@ -62,21 +62,28 @@ public class GameManager : MonoBehaviour
 
         if (CurrRound >= gameConfig.TotalRounds - 1)
         {
-            mainCanvas.ShowEnding(GetEnding());
+            string text;
+            Sprite sprite;
+            GetEnding(out text, out sprite);
+            mainCanvas.ShowEnding(text, sprite);
         }
     }
 
-    public string GetEnding()
+    public void GetEnding(out string text, out Sprite endingImage)
     {
         foreach(Ending ending in gameConfig.endings)
         {
-            if(PlayerModel.GetV(ValueType.Major) > ending.Major 
+            if (PlayerModel.GetV(ValueType.Major) > ending.Major
                 && PlayerModel.GetV(ValueType.Emotion) > ending.Emotion)
             {
-                return ending.text;
+                text = ending.text;
+                endingImage = ending.endImage;
+                return;
             }
         }
-        return "";
+
+        text = "";
+        endingImage = null;
     }
 
     public void ShowEnergyNotEnough()
@@ -87,6 +94,11 @@ public class GameManager : MonoBehaviour
     public void ChangeCurrentSceneSprite(Sprite newSprite)
     {
         AtSceneManager.sceneSprite.sprite = newSprite;
+    }
+
+    public void ChangeCurrentSceneDefaultSprite()
+    {
+        AtSceneManager.ChangeToDefaultSprite();
     }
 
     void OnChangedVEvent(ValueType type, int oldValue, int newValue, int changeAmount)

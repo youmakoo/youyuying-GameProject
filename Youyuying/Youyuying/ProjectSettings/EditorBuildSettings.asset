@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CommercialSt.unity
     guid: 616becbf680958845a3b4bb805391459
+  - enabled: 1
+    path: Assets/Scenes/Laptop.unity
+    guid: f80f6e27d75457049aa8ba6a33408d38
   m_configObjects: {}

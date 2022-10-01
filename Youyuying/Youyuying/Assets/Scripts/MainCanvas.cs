@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class MainCanvas : MonoBehaviour
 {
@@ -12,8 +13,12 @@ public class MainCanvas : MonoBehaviour
     public Text money;
     public Text round;
     public Text ending;
+    public Image endingImage;
     public Text noEnergy;
     public Animator showText;
+
+    public Image energyBar;
+    public Image emotionBar;
 
     public Button NextRoundBtn;
 
@@ -23,6 +28,7 @@ public class MainCanvas : MonoBehaviour
 
         PlayerModel.ChangedVEvent += OnChangedVEvent;
         round.text = "Round: " + (GameManager.Instance.CurrRound + 1);
+        emotionBar.fillAmount = 0;
         ResetStats();
     }
 
@@ -35,9 +41,11 @@ public class MainCanvas : MonoBehaviour
                 break;
             case ValueType.Energy:
                 energy.text = "Energy: " + newValue.ToString();
+                energyBar.DOFillAmount((float)newValue / GameManager.Instance.gameConfig.PlayerInitEnergy, 0.7f);
                 break;
             case ValueType.Major:
                 major.text = "Major: " + newValue.ToString();
+                emotionBar.DOFillAmount((float)newValue / 400, 0.7f);
                 break;
             case ValueType.Money:
                 money.text = "Money: " + newValue.ToString();
@@ -60,15 +68,17 @@ public class MainCanvas : MonoBehaviour
         round.text = "Round: " + (GameManager.Instance.CurrRound + 1);
     }
 
-    public void ShowEnding(string text)
+    public void ShowEnding(string text, Sprite sprite)
     {
         ending.transform.parent.gameObject.SetActive(true);
         ending.text = text;
+        endingImage.sprite = sprite;
     }
 
     public void ShowEnergyNotEnough()
     {
         noEnergy.gameObject.SetActive(true);
+        NextRoundBtn.gameObject.SetActive(true);
         showText.Play("EnergyTextShow");
     }
 

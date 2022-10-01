@@ -17,8 +17,8 @@ public class EffectManager : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.EffectManager = this;
-        SkipButton.GetComponent<Button>().onClick.AddListener(SkipEffect);
-        SkipButton.SetActive(false);
+        SkipButton?.GetComponent<Button>().onClick.AddListener(SkipEffect);
+        SkipButton?.SetActive(false);
     }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class EffectManager : MonoBehaviour
     /// <param name="effect"></param>
     public void PlayEffect(IEffect effect, Action<IEffect> playEndCallBack = null)
     {
-        SkipButton.SetActive(true);
+        SkipButton?.SetActive(true);
         GameManager.Instance.AtSceneManager.HideEvent();
         GameObject tempObj = GameObject.Instantiate(effect.gameObject);
         AtEffect = tempObj.GetComponent<IEffect>();
@@ -47,7 +47,7 @@ public class EffectManager : MonoBehaviour
     /// <param name="effect"></param>
     public void EffectEnd(IEffect effect)
     {
-        SkipButton.SetActive(false);
+        SkipButton?.SetActive(false);
         GameManager.Instance.AtSceneManager.ShowEvent();
         Destroy(effect.gameObject);
     }

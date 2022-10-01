@@ -5,7 +5,8 @@ public enum LocationType
 {
     Dorm,
     ClassRoom,
-    Street
+    Street,
+    Laptop
 }
 public enum LocationState
 {

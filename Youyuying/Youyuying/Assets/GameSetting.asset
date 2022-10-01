@@ -13,17 +13,21 @@ MonoBehaviour:
   m_Name: GameSetting
   m_EditorClassIdentifier: 
   PlayerInitEnergy: 100
-  TotalRounds: 3
+  TotalRounds: 8
   endings:
   - Major: 60
     Emotion: 60
     text: "\u7ED3\u5C401"
+    endImage: {fileID: 21300000, guid: 8deae8888588b5047bae1f5d7de5fb1c, type: 3}
   - Major: 40
     Emotion: 40
     text: "\u7ED3\u5C402"
+    endImage: {fileID: 21300000, guid: 26e454721971de44dad795faf0a6f10d, type: 3}
   - Major: 20
     Emotion: 20
     text: "\u7ED3\u5C403"
+    endImage: {fileID: 21300000, guid: 96f1f1a8cc801954dbb9880853ca13c6, type: 3}
   - Major: 0
     Emotion: 0
     text: "\u7ED3\u5C404"
+    endImage: {fileID: 21300000, guid: 8deae8888588b5047bae1f5d7de5fb1c, type: 3}

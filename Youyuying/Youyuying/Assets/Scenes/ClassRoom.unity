@@ -947,7 +947,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: efc6eff98f377e9459b50171966b3dcf, type: 2}
   AllShowButton: []
   sceneSprite: {fileID: 1849444375}
-  defaultSprite: {fileID: 21300000, guid: fce37dcb2eee6c641a320e2619d2a57a, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 71b1b74f1ad7eec4fa1ae734c4bde256, type: 3}
+  _FirstInEvent: {fileID: 11400000, guid: b4601c702df96174d89252afe3539f24, type: 2}
+  _FirstInSprite: {fileID: 21300000, guid: fce37dcb2eee6c641a320e2619d2a57a, type: 3}
 --- !u!114 &1681013357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fce37dcb2eee6c641a320e2619d2a57a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71b1b74f1ad7eec4fa1ae734c4bde256, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

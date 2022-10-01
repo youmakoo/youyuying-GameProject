@@ -29,6 +29,11 @@ public abstract class ISceneManager : MonoBehaviour
         QOnDestroy();
     }
 
+    public void ChangeToDefaultSprite()
+    {
+        sceneSprite.sprite = defaultSprite;
+    }
+
    /// <summary>
    /// 显示所有事件的逻辑
    /// </summary>
